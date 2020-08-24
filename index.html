@@ -3,17 +3,6 @@
   <head>
 	<meta name="generator" content="Hugo 0.74.3" />
     
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-174993048-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 
 <meta property="og:title" content="TeamFluent" />
 <meta property="og:description" content="" />
@@ -33,6 +22,7 @@ if (!doNotTrack) {
 <link rel="stylesheet" type="text/css" href="/css/style.min.5e41838f64f53594d584540f087089c6e9cbf347f2059b1f51eba29206ac399a.css" integrity="sha256-XkGDj2T1NZTVhFQPCHCJxunL80fyBZsfUeuikgasOZo=">
 <link rel="stylesheet" type="text/css" href="/css/icons.css">
 
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
   </head>
   <body>
     
@@ -453,5 +443,43 @@ if (!doNotTrack) {
 <script src="/js/fresh.js"></script>
 <script src="/js/jquery.panelslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <script src="/js/cookieconsent.min.js"></script>
+    <style>
+    .cc-message {
+      border-top: solid #f1917f;
+    }
+    .cc-DENY {
+      border: none;
+    }
+    .cc-ALLOW {
+      color: #06267e !important;
+      border-color: #06267e !important;
+    }
+    .cc-window {
+      background-color: white;
+    }
+    .cc-btn {
+      color: #f1917f;
+      border-color: #f1917f;
+      background-color: white;
+    }
+    .cc-revoke { display: none; }
+    </style>
+    <script>
+      function startga() {
+        var doNotTrack = false;
+        if (!doNotTrack) {
+         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+         ga('create', 'UA-174993048-1', 'auto');
+         ga('send', 'pageview');
+        }
+      }
+
+      var CC = window.CookieConsent;
+      var cc = new CC({type: 'opt-in', regionalLaw: true, legal: 'FI', content: {dismiss: 'Disallow cookies'}});
+      cc.on('statusChanged', function(x, y) { if (y === 'ALLOW') { startga(); } });
+      cc.on('initialized', function(i) { if (i.length > 1) { if (i[0].UNCATEGORIZED === 'ALLOW') { startga(); } } });
+    </script>
   </body>
 </html>
