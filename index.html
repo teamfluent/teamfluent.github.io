@@ -5,13 +5,13 @@
     
 
 <meta property="og:title" content="TeamFluent" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="A new and powerful approach to boost team performance" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://teamfluent.fi/" />
 
 
 
-<meta name="description" content="Hardcoded description; the author should update :)" />
+<meta name="description" content="A new and powerful approach to boost team performance" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -428,8 +428,21 @@
               <div class="column is-12">
                 <textarea class="textarea" rows="10" name="text" placeholder="What do you want us to know?"></textarea>
               </div>
+              <div class="column is-12 has-text-centered">
+                    <script>
+                      function privacy_toggle() {
+                        if (document.getElementById('privacy').checked) {
+                          document.getElementById('submitbutton').disabled = false;
+                        } else {
+                          document.getElementById('submitbutton').disabled = true;
+                        }
+                      }
+                    </script>
+                <input id="privacy" name="privacy" type="checkbox" onclick="privacy_toggle();">
+                <label for="privacy">I agree to the <a target="_blank" href="/privacy-policy.html">privacy policy of TeamFluent Oy</a></label>
+              </div>
               <div class="form-footer has-text-centered mt-10">
-                <button class="button cta is-large primary-btn raised is-clear">Send Message</button>
+                <button disabled id="submitbutton" class="button cta is-large primary-btn raised is-clear">Send Message</button>
               </div>
             </div>
           </form>
